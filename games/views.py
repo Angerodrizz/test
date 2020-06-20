@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.db.models import Sum
 from django.contrib import messages
+from .models import games
 
 def index(request):
     return render(request,"games/index.html")
@@ -38,10 +39,19 @@ def login_u(request):
             return HttpResponseRedirect(reverse("index"))
         else:
             messages.warning(request,'Invalid credentials, please try again')
-            return render(request,"orders/login.html") 
-    return render(request,"orders/login.html")     
+            return render(request,"games/login.html") 
+    return render(request,"games/login.html")     
     
 def logout_u(request):
     logout(request)
     messages.warning(request,'Logged out.')
-    return render(request,"orders/login.html")
+    return render(request,"games/index.html")
+
+
+
+def menu(request):
+    context = {
+        "games": games.objects.all(),
+    }
+        
+    return render(request,"games/games.html", context)

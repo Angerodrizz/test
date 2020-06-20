@@ -1,0 +1,25 @@
+{% extends "games/layout.html" %}
+
+{% load static %}
+
+{% block main %}
+
+{% for row in games %} 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+   <a href="">{{row.name}}</a>
+   <img src="{{games.games.url}}" alt="{{row.image}}">
+{% endfor %}
+
+
+
+{% endblock %}
