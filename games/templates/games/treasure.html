@@ -1,0 +1,24 @@
+{% extends "games/layout.html" %}
+
+{% load static %}
+
+{% block script %}
+    <script type="text/javascript"src="{% static 'js/game.js' %}"></script>
+    <script type="text/javascript"src="{% static 'js/helpers.js' %}"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+{% endblock %}
+
+
+{% block main %}
+
+<div class='game1'>
+<h1>Find the Treasure</h1>
+<img src="{% static 'img/treasure.jpg' %}" width="500" height="500" id="map" loading="lazy">
+
+<p id='distance'></p>
+
+
+
+<div>
+
+{% endblock %}
