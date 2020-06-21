@@ -1,25 +1,22 @@
 {% extends "games/layout.html" %}
 
 {% load static %}
-
 {% block main %}
 
-{% for row in games %} 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-   <a href="">{{row.name}}</a>
-   <img src="{{games.games.url}}" alt="{{row.image}}">
-{% endfor %}
-
-
-
+   {% for n in img %}
+   <div class="l">
+      <h2>{{n.title}}</h2>
+         <img src="{{n.image.url}}" alt="" class="size">
+   </div>
+   {% endfor %}
+   {% for n in img2 %}
+   <div class="l">
+      <h2>{{n.title}}</h2>
+         <img src="{{n.image.url}}" alt="" class="size2">
+   </div>
+   {% endfor %}
 {% endblock %}
+
+
+    
+   

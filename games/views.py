@@ -5,8 +5,7 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.db.models import Sum
 from django.contrib import messages
-from .models import games
-
+from .models import Item, Console_games
 
 def index(request):
     return render(request,"games/index.html")
@@ -51,13 +50,9 @@ def logout_u(request):
 
 
 def menu(request):
-    context = {
-        "games": games.objects.all(),
-    }
-        
-    return render(request,"games/games.html", context)
-
+    img = Item.objects.all()
+    img2 = Console_games.objects.all()
+    return render(request,"games/games.html", {'img': img, 'img2':img2})
 
 def treasure(request):
     return render(request,'games/treasure.html')
-    

@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from django.conf import settings
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
@@ -11,4 +12,4 @@ urlpatterns = [
     path("logout", views.logout_u, name="logout"),
     path("menu", views.menu, name="menu"),
     path('treasure', views.treasure, name='treasure'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

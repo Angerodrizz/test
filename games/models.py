@@ -3,16 +3,23 @@ from django.contrib.auth.models import User
 from django.conf import settings
 from PIL import Image
 
-# Create your models here.
-
-class games(models.Model): #Category
-    name=models.CharField(max_length=64)
-    image = models.ImageField(verbose_name="Imagen", upload_to="games")
+class Item(models.Model): #Category
+    title = models.CharField(max_length=64)
+    description = models.CharField(max_length=500)
+    image = models.ImageField(upload_to="images")
+    link = models.URLField(max_length=200, null=True)
 
     def __str__(self):
-        return f"{self.name}"
+        return self.title
+
+class Console_games(models.Model): #Category
+    title = models.CharField(max_length=64)
+    description = models.CharField(max_length=500)
+    image = models.ImageField(upload_to="images")
+    link = models.URLField(max_length=200, null=True)
+
+    def __str__(self):
+        return self.title
 
 
-
-
-
+# Create your models here.
