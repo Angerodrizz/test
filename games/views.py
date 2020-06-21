@@ -56,3 +56,6 @@ def menu(request):
 
 def treasure(request):
     return render(request,'games/treasure.html')
+
+def memory(request):
+    return render(request,'games/memory.html')

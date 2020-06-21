@@ -12,4 +12,5 @@ urlpatterns = [
     path("logout", views.logout_u, name="logout"),
     path("menu", views.menu, name="menu"),
     path('treasure', views.treasure, name='treasure'),
+    path('memory', views.memory, name='memory'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

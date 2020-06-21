@@ -28,7 +28,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{% url 'index' %}">Home<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'menu' %}">Games</a>
@@ -41,6 +41,7 @@
                     Entertainment
                   </a>
                   <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'memory' %}">Krypto's memory game</a>
                     <a class="dropdown-item" href="{% url 'treasure' %}">Find The Treasure</a>
                     <a class="dropdown-item" href="#">Mr.Wizard guess your number</a>
                 </li>
