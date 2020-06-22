@@ -64,10 +64,11 @@ def memory(request):
 
 
 def weather(request):
-    url = 'https://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=924e5157e1f2510aa337b8b996106b17'
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=924e5157e1f2510aa337b8b996106b17'
     
     if request.method == 'POST':
-        pass
+        form = CityForm(request.POST)
+        form.save
 
     form = CityForm()
 
