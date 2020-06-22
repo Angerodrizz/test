@@ -1,11 +1,37 @@
 {% extends "games/layout.html" %}
-
 {% load static %}
 
 {% block main %}
-
-
-
-
-
+<div class="bg2">
+    <div class="container sig">
+        <form class='m-5' action="{% url 'registration' %}" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="username">First name:</label>
+                <input type="text" class="form-control" name="first_name">
+            </div>
+            <div class="form-group">
+                <label for="username">Last name:</label>
+                <input type="text" class="form-control" name="last_name">
+            </div>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" name="username">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" name="email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" name="password">
+            </div>
+            <div class="form-group">
+                <label for="password">Confirm Password:</label>
+                <input type="password" class="form-control" name="password2">
+            </div>
+            <button type="submit" class="btn btn-primary cntr">Sign In</button>
+        </form>
+    </div>
+</div>
 {% endblock %}
