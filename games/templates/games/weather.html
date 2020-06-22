@@ -2,9 +2,12 @@
 
 {% load static %}
 
+{% block script %}
+    <script type="text/javascript"src="{% static 'js/weather.js' %}"></script>
+{% endblock %}
 
 {% block main %}
-<div class='game1'>
+<div class='game1 bg-game1'>
     <br>
     <br>
     <br>
@@ -27,11 +30,11 @@
                     <form method="POST">
                         {% csrf_token %}
                         <div class="field has-addons">
-                            <div class="control is-expanded">
+                            <div class="control is-expanded"> 
                                 {{ form.title }}
                             </div>
                             <div class="control">
-                                <button class="button is-info">
+                                <button class="btn button is-info">
                                     Add City
                                 </button>
                             </div>
@@ -62,6 +65,11 @@
                                         <br> {{ city_weather.description }}
                                     </p>
                                 </div>
+                            </div>
+                            <div class='media-right'>
+                                <a href="{% url 'delete_city' city_weather.city %}">
+                                    <button class='delete'></button>
+                                </a>
                             </div>
                         </article>
                     </div>

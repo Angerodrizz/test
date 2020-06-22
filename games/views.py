@@ -1,7 +1,7 @@
 from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib.auth import login,logout,authenticate
 from django.contrib.auth.models import User
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.db.models import Sum
 from django.contrib import messages
@@ -70,6 +70,11 @@ def weather(request):
         form = CityForm(request.POST)
         form.save
 
+        title=request.POST['title']
+        order_number = City(title=title,)
+        order_number.save()
+    
+
     form = CityForm()
 
     cities = City.objects.all()
@@ -92,4 +97,9 @@ def weather(request):
         
     
     context = {'weather_data' : weather_data, 'form' : form}
-    return render(request,'games/weather.html', {'context': context})
+    return render(request,'games/weather.html', context)
+
+
+def delete_city(request, city_name):
+        City.objects.get(title=city_name).delete()
+        return redirect('weather')
