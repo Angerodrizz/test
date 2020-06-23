@@ -1,11 +1,13 @@
 from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib.auth import login,logout,authenticate
 from django.contrib.auth.models import User
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.db.models import Sum
 from django.contrib import messages
-from .models import Item, Console_games
+from .models import Item, Console_games, City
+import requests
+from .forms import CityForm
 
 def index(request):
     return render(request,"games/index.html")
@@ -59,3 +61,51 @@ def treasure(request):
 
 def memory(request):
     return render(request,'games/memory.html')
+    
+def drawing(request):
+    return render(request,'games/drawing.html')
+
+
+def weather(request):
+    url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=imperial&appid=924e5157e1f2510aa337b8b996106b17'
+    
+    if request.method == 'POST':
+        form = CityForm(request.POST)
+        form.save
+
+        title=request.POST['title']
+        order_number = City(title=title,)
+        order_number.save()
+    
+
+    form = CityForm()
+
+    cities = City.objects.all()
+
+    weather_data = []
+
+    for city in cities:
+
+        r = requests.get(url.format(city)).json()
+
+        city_weather = {
+            'city' : city.title,
+            'temperature' : r['main']['temp'],
+            'description' : r['weather'][0]['description'],
+            'icon' : r['weather'][0]['icon'],
+        }
+
+        weather_data.append(city_weather)
+        
+        
+    
+    context = {'weather_data' : weather_data, 'form' : form}
+    return render(request,'games/weather.html', context)
+
+
+def delete_city(request, city_name):
+        City.objects.get(title=city_name).delete()
+        return redirect('weather')
+
+def tone(request):
+    return render(request,'games/tone.html')

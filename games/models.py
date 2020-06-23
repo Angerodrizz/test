@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 from django.conf import settings
 from PIL import Image
 
+# Create your models here.
+
+
 class Item(models.Model): #Category
     title = models.CharField(max_length=64)
     description = models.CharField(max_length=500)
@@ -22,4 +25,10 @@ class Console_games(models.Model): #Category
         return self.title
 
 
-# Create your models here.
+class City(models.Model):
+    title = models.CharField(max_length=25)
+
+    def __str__(self):
+        return self.title
+
+    

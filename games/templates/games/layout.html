@@ -33,9 +33,6 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'menu' %}">Games</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Forum</a>
-                </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Entertainment
@@ -43,10 +40,11 @@
                   <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{% url 'memory' %}">Krypto's memory game</a>
                     <a class="dropdown-item" href="{% url 'treasure' %}">Find The Treasure</a>
-                    <a class="dropdown-item" href="#">Mr.Wizard guess your number</a>
+                    <a class="dropdown-item" href="{% url 'drawing' %}">Drawing</a>
+                    <a class="dropdown-item" href="{% url 'tone' %}">Play Piano!</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Weather</a>
+                  <a class="nav-link" href="{% url 'weather' %}">Weather</a>
                 </li>
                   {% if user.is_authenticated %}
                 <li class="nav-item">

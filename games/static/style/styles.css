@@ -93,8 +93,27 @@ div small {
     text-decoration: none;
   }
 
+  /* Find the Treasure */
+  .game1 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0;
+    margin-top: 10vh;
+  }
+
+  .bg-game1 {
+    background: #8360c3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
  
-  
+
+
+ 
   /* RESPONSIVE */
   
   @media (max-width: 960px) {
