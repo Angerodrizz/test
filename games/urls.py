@@ -15,4 +15,6 @@ urlpatterns = [
     path('memory', views.memory, name='memory'),
     path('weather', views.weather, name='weather'),
     path('delete/<city_name>/', views.delete_city, name='delete_city'),
+    path('drawing', views.drawing, name='drawing'),
+    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

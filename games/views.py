@@ -61,6 +61,9 @@ def treasure(request):
 
 def memory(request):
     return render(request,'games/memory.html')
+    
+def drawing(request):
+    return render(request,'games/drawing.html')
 
 
 def weather(request):
