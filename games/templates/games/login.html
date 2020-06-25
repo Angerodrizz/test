@@ -4,20 +4,20 @@
 
 {% block main %}
 <div class="bg1">
-    <div class="container login">
+    <div class="container-fluid login">
         <form class='m-5' action="{% url 'login' %}" method="POST">
             {% csrf_token %}
-            <div class="form-group">
+            <div class="col-8 col-md-12 form-group">
                 <label for="username">Username:</label>
                 <input type="text" class="form-control" name="username">
             </div>
-            <div class="form-group">
+            <div class="col-8 col-md-12 form-group">
                 <label for="pwd">Password:</label>
                 <input type="password" class="form-control" name="password">
             </div>
-            <button type="submit" class="btn btn-primary">Log In</button>
+            <button type="submit" class="btn btn-primary center1">Log In</button>
         </form>
-        <div class='text-center m-2'>
+        <div class='center1'>
             No account yet? <a href="{% url 'registration' %}">Sign In</a>
         </div>
     </div>
