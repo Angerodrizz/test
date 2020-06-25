@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static%}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Canvas Drawing App</title>
+  <link rel="stylesheet" href="{% static 'style/drawing.css' %}" />
+</head>
+<body>
+  <canvas></canvas>
+  <main>
+    <section class="colors">
+      <input type="color" class="color-picker" value="#171717" />
+    </section>
+    <section class="thickness">
+      <input type="number" class="stroke-weight" value="3" />
+    </section>
+    <button class="clear">X</button>
+  </main>
+  <script src="{% static 'js/drawing.js' %}"></script>
+</body>
+</html>

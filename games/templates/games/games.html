@@ -1,0 +1,31 @@
+{% extends "games/layout.html" %}
+
+{% load static %}
+{% block main %}
+
+<div class="bg3 container-fluid">
+{% for n in img %}
+   <div class="card i1 col-sm-4" style="width: 18rem;">
+      <img class="card-img-top" src="{{n.image.url}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{n.title}}</h5>
+        <a href="https://store.steampowered.com/?l=spanish" class="btn btn-primary">Buy now!</a>
+      </div>
+    </div>
+    <br>
+    {% endfor %}
+    {% for n in img2 %}
+    <div class="card i1 col-sm-4" style="width: 18rem;">
+      <img class="card-img-top" src="{{n.image.url}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{n.title}}</h5>
+        <a href="https://store.steampowered.com/?l=spanish" class="btn btn-primary">Buy now!</a>
+      </div>
+    </div>
+   <br>
+    {% endfor %}
+   </div>
+   
+    {% endblock %}
+
+  

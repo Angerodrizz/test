@@ -1,0 +1,363 @@
+* {
+    box-sizing: border-box;
+  }
+
+.navbar {
+    background-color: black;
+}
+
+ul li a {
+    color: white !important;
+  }
+
+
+footer {
+    background-color: black !important;
+}
+
+div small {
+    color: white;
+}
+
+
+
+  body {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    overflow-x: hidden;
+  }
+  
+  .header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .content {
+    max-width: 40rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 8vh;
+  }
+  
+  .header-video video {
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  .header-overlay {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 1;
+    opacity: .85;
+  }
+  
+  .header-content {
+    z-index: 2;
+  }
+  
+  .header-content h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+    font-family: 'Permanent Marker', cursive;
+  }
+  
+  .header-content p {
+    font-size: 1.5rem;
+    display: block;
+    padding-bottom: 2rem;
+  }
+  
+  .btn {
+    background: #c44569;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 1rem 1rem;
+    text-decoration: none;
+  }
+
+  /* Find the Treasure */
+  .game1 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0;
+    margin-top: 10vh;
+  }
+
+  .bg-game1 {
+    background: #8360c3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+ 
+
+
+ 
+  /* RESPONSIVE */
+  
+  @media (max-width: 960px) {
+    .content {
+      padding: 0 3rem 0 3rem;
+    }
+  }
+
+/*BOOTSTRAP CARDS*/
+.center {
+   margin-left: 0;
+ }
+
+
+/*****************LOGIN CATEGORY (REVISADO)***********************************/
+.bg1 {
+  background-image: url(/static/img/bg3.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 250vh;
+  background-repeat: no-repeat;
+  padding-top: 5.8vh;
+ }
+
+ .login {
+  padding-top: 20vh;
+  color: aliceblue;
+  font-size: 4vh;
+  font-family: 'Permanent Marker', cursive;
+  width: 100vh;
+  margin-left: 0em;
+  margin-top: 1.3vh;
+ }
+
+ .center1 {
+   margin-left: 25vh;
+ }
+/*****************LOGIN CATEGORY (REVISADO)***********************************/
+
+
+ /*SIGN IN STYLE*/
+.bg2 {
+  background-image: url(/static/img/bg2.jpg);
+  background-attachment: fixed;
+  margin: auto;
+  width: 240vh;
+  height: 130vh;
+}
+
+
+.sig {
+  padding: 10vh;
+  color: rgb(202, 17, 17);
+  font-size: 4vh;
+  font-family: 'Permanent Marker', cursive;
+
+}
+
+.cntr {
+  margin-left: 35vh;
+}
+
+.size {
+  width: 75vh;
+  height: 75vh;
+  padding-top: 2vh;
+}
+
+.l {
+  margin-right: 10vh;
+}
+.size2 {
+  width: 75vh;
+  height: 75vh;
+  padding-top: 2vh;
+  margin-left: 75vh;
+}
+/*****************GAMES CATEGORY (REVISADO)***********************************/
+.i1 {
+  margin-left: 80vh;
+}
+
+.bg3 {
+  background-image: url(/static/img/bg.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 280vh;
+  background-repeat: no-repeat;
+  padding-top: 12vh;
+}
+/*****************GAMES CATEGORY (REVISADO)***********************************/
+
+
+#juego {
+  padding-top: 20vh;
+  opacity: 0.3;
+  width: 600px;
+  height: 600px;
+  margin-left: 70vh;
+}
+
+table {
+  width: 100%;
+  height: 100%;
+}
+
+td {
+  width: 25%;
+  height: 25%;
+  background-color: black;
+  border: 3px solid wheat;
+  border-radius: 5px;
+}
+
+.letra {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  font-style: italic;
+}
+
+input {
+  width: 90px;
+  height: 30px;
+}
+
+.centrar {
+  padding-top: 2vh;
+  margin-left: 95vh;
+  padding: 2vh;
+}
+
+.bg4 {
+  background-image: url(/static/img/bg4.png);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 250vh;
+  background-repeat: no-repeat;
+  padding-top: 5.8vh;
+}
+
+
+
+@keyframes move {
+  from {
+      left: -100%;
+  }
+  to  {
+      left: 0%;
+  }
+}
+
+#title {
+  position: relative;
+  animation-name: move;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes move2 {
+  from {
+      right: -100%;
+  }
+  to  {
+      right: 0%;
+  }
+}
+
+#ico {
+  position: relative;
+  animation-name: move2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.ico {
+  width: 10vh;
+  height: 10vh;
+}
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 560px) {
+  /*HTML GAMES*/
+  .i1 {
+    margin-left: 10vh ;
+  }
+  /*HTML LOGIN*/
+  .center1 {
+    margin-left: 11.5vh;
+  }
+
+  /*MEMORY*/
+  
+  #juego {
+    width: 400px;
+    height: 500px;
+  }
+
+  .centrar {
+    margin-left: 20% !important;
+  }
+
+  /*SIGN IN*/
+
+  .bg2 {
+  background-attachment: fixed;
+  margin: auto;
+  }
+
+  .cntr {
+    margin-left: 100px;
+  }
+}
+
+
+/* Landscape */
+@media (max-height: 500px) {
+  .title, .text {
+    display: none;
+  }
+}
+
+/* GAMES RESPONSIVE */
+@media (max-width: 720px) {
+  .i1 {
+    margin-left: 35vh ;
+  }
+
+  #juego {
+    margin-left: 5vh;
+  }
+
+  .centrar {
+    margin-left: 35vh;
+  }
+}
+
+
+
+
+.line {
+  background-color: rgba(169, 169, 169, 0.637);
+}
