@@ -361,3 +361,7 @@ input {
 .line {
   background-color: rgba(169, 169, 169, 0.637);
 }
+
+span {
+  color: #2ebf91;
+}
