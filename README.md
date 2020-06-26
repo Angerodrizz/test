@@ -22,4 +22,6 @@ Installation:
 -Go to website address and register an account.
 
 The project's video: 
-![Screenshot](static/img/page.png)
+
+# Screenshot
+![Screenshot](games/static/img/page.png)
